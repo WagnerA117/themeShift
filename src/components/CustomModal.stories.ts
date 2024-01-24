@@ -1,17 +1,19 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type {Meta, StoryObj} from "@storybook/react";
 
-import { CustomModal } from "./customModal";
+import {CustomModal} from "./CustomModal";
 
 //👇 This default export determines where your story goes in the story list
 const meta: Meta<typeof CustomModal> = {
-  component: CustomModal,
+	component: CustomModal,
+	title: "CustomModal",
 };
 
 export default meta;
 type Story = StoryObj<typeof CustomModal>;
 
-export const FirstStory: Story = {
-  args: {
-    //👇 The args you need here will depend on your component
-  },
+export const Standard: Story = {
+	args: {
+		//👇 The args you need here will depend on your component
+		label: "Open Modal",
+	},
 };
